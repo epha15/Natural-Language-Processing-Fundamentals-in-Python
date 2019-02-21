@@ -1,0 +1,17 @@
+my_string = "Let's write RegEx!"
+re.findall(PATTERN, my_string)
+
+PATTERN = r"\s+"
+>> Spaces in the string
+>>[' ', ' ']
+
+PATTERN = r"\w+"
+>> ['Let', 's', 'write', 'RegEx']
+>> without +, it will grab all letter
+
+PATTERN = r"[a-z]"
+>>['e', 't', 's', 'w', 'r', 'i', 't', 'e', 'e', 'g', 'x']
+>>grab small leters
+
+PATTERN = r"\w"
+>> ['L', 'e', 't', 's', 'w', 'r', 'i', 't', 'e', 'R', 'e', 'g', 'E', 'x']
