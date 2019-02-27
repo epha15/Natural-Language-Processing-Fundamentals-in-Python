@@ -1,0 +1,15 @@
+# word_tokenize(s)[source] = Tokenize a string to split off punctuation other than periods
+# nltk.tokenize.regexp.regexp_tokenize(text, pattern, gaps=False, discard_empty=True, flags=<RegexFlag.UNICODE|DOTALL|MULTILINE: 56>)
+# regexp_tokenize need the regex pattern
+
+# Tokenize and print all words in german_text
+all_words = word_tokenize(german_text)
+print(all_words)
+
+# Tokenize and print only capital words
+capital_words = r"[A-Z\Ü]\w+"
+print(regexp_tokenize(german_text, capital_words))
+
+# Tokenize and print only emoji
+emoji = "['\U0001F300-\U0001F5FF'|'\U0001F600-\U0001F64F'|'\U0001F680-\U0001F6FF'|'\u2600-\u26FF\u2700-\u27BF']"
+print(regexp_tokenize(german_text, emoji))
